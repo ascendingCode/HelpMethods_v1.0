@@ -14,42 +14,14 @@ namespace TestHelpMethods
     {
         public static void Main(string[]args)
         {
-            //Пример использования.
+            //Пример использования новой функции
 
-            string[] games = { "Grand Theft Auto V", "Counter-Strike", "Fallout 3", "Minecraft", "Fortnite" };
-            ConsoleHelperMethod.SaveColor(ConsoleColor.White);
-            ConsoleHelperMethod.PrintAndNoSaveColor(ConsoleColor.Green,"Hello!Select menu item.");
-            Console.WriteLine("1.Print all process.");
-            Console.WriteLine("2.Seach item to array.");
+            Process process = Process.GetProcessById(12208); //explorer.exe (проводник)
+            HelperMethod.PrintProcessModule(process.ProcessName); //Выводим все модули
 
-            int ReadMenu = int.Parse(Console.ReadLine());
+            ProcessModule processModule = HelperMethod.GetProcessModule(process, "icu.dll"); //Получаем модуль
 
-            if(ReadMenu==1)
-            {
-                HelperMethod.PrintAllProcess();
-                ConsoleHelperMethod.LoadColor();
-            }
-            else if(ReadMenu==2)
-            {
-                Console.Clear();
-                Console.Write("Enther game name: ");
-                string ReadGameName = Console.ReadLine();
-
-                if(string.IsNullOrEmpty(ReadGameName))
-                {
-                    ConsoleHelperMethod.ErrorMessage("Error! The name of the game cannot be empty!");
-                    ConsoleHelperMethod.LoadColor();
-                }
-                else
-                {
-                    HelperMethod.SeachToArray(games, ReadGameName);
-                    ConsoleHelperMethod.LoadColor();
-                }
-            }
-            else
-            {
-                ConsoleHelperMethod.ErrorMessage("Error! Invalid menu item!");
-            }
+            Console.WriteLine(processModule.ModuleName); //Теперь у нас есть этот модуль.
         }
     }
 }

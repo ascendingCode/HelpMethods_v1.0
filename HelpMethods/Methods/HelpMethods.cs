@@ -7,6 +7,7 @@ using System.Reflection;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace HelpMethods
 {
@@ -33,7 +34,7 @@ namespace HelpMethods
         {
             if (SaveOldColor.ToString() == null)
             {
-                ErrorMessage("Сохраненых цветов нету!");
+                ErrorMessage("Сохраненных цветов нету!");
             }
             else
             {
@@ -229,7 +230,7 @@ namespace HelpMethods
                 }
             }
         }
-        public static void GetProcessModule(string processName)
+        public static void PrintProcessModule(string processName)
         {
             if (string.IsNullOrEmpty(processName))
             {
@@ -253,7 +254,25 @@ namespace HelpMethods
                 }
             }
         }
-        public static void GetProcessThreadInfo(string processName)
+        public static ProcessModule GetProcessModule(Process process,string moduleName)
+        {
+            ProcessModuleCollection processModuleCollection = process.Modules;
+            ProcessModule processModule = default;
+            for(int i = 0; i < processModuleCollection.Count; i++)
+            {
+                if (processModuleCollection[i].ModuleName == moduleName)
+                {
+                    processModule = processModuleCollection[i];
+                    break;
+                }
+                else
+                {
+                    continue;
+                }
+            }
+            return processModule;
+        }
+        public static void PrintProcessThreadInfo(string processName)
         {
             if (string.IsNullOrEmpty(processName))
             {

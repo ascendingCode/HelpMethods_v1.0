@@ -5,3 +5,10 @@ E:\C# project\HelpMethods\HelpMethods\bin\Debug\HelpMethods.exe
 E:\C# project\HelpMethods\HelpMethods\bin\Debug\HelpMethods.pdb
 E:\C# project\HelpMethods\HelpMethods\obj\Debug\HelpMethods.exe
 E:\C# project\HelpMethods\HelpMethods\obj\Debug\HelpMethods.pdb
+E:\GitHubProject\HelpMethods_v1.0\HelpMethods\bin\Debug\HelpMethods.exe.config
+E:\GitHubProject\HelpMethods_v1.0\HelpMethods\bin\Debug\HelpMethods.exe
+E:\GitHubProject\HelpMethods_v1.0\HelpMethods\bin\Debug\HelpMethods.pdb
+E:\GitHubProject\HelpMethods_v1.0\HelpMethods\obj\Debug\HelpMethods.csprojAssemblyReference.cache
+E:\GitHubProject\HelpMethods_v1.0\HelpMethods\obj\Debug\HelpMethods.csproj.CoreCompileInputs.cache
+E:\GitHubProject\HelpMethods_v1.0\HelpMethods\obj\Debug\HelpMethods.exe
+E:\GitHubProject\HelpMethods_v1.0\HelpMethods\obj\Debug\HelpMethods.pdb
